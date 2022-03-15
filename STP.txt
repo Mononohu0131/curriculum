@@ -1,0 +1,13 @@
+ルートブリッジはプライオリティが一番小さいSwitch3になります。
+
+Switch1：Switch2側ポート⇨DP（RPの対向ポートだから）
+         Switch3側ポート⇨RP（ルートパスコストが最小の100のため）
+
+Switch2：Switch1側ポート⇨RP（ルートパスコストが最小の119のため）
+         Switch4側ポート⇨BP（RP、DPいずれにも選出されていないから）
+
+Switch3：Switch1側ポート⇨DP（ルートブリッジのポートだから）
+         Switch4側ポート⇨DP（ルートブリッジのポートだから）
+
+Switch4：Switch2側ポート⇨DP（Switch2と比べて、ブリッジIDが小さいから）
+         Switch3側ポート⇨RP（ルートパスコストが最小の100のため）
